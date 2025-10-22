@@ -1,0 +1,64 @@
+
+/* style.css - EduHub (Anurag University) - Creative Student Portal */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500&display=swap');
+
+:root{
+  --bg:#f4fbff;
+  --card:#ffffff;
+  --accent:#ff6b35;
+  --blue:#002b5b;
+  --muted:#586779;
+  --glass: rgba(255,255,255,0.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(180deg,#e9f5ff 0%, #f4fbff 100%);
+  color:var(--blue);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* Navbar */
+.navbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 28px; position:sticky; top:0; background:transparent; z-index:50;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.logo{
+  font-family:'Montserrat',sans-serif; font-weight:700; color:var(--blue); font-size:20px;
+}
+.tag{font-size:12px; color:var(--muted)}
+
+/* Hero */
+.hero{
+  display:flex; gap:28px; padding:48px 6%; align-items:center;
+}
+.hero-left{flex:1;}
+.h1{font-size:36px; margin:6px 0; color:var(--blue); font-weight:700;}
+.lead{color:var(--muted); margin-bottom:14px;}
+.cta{display:flex; gap:12px;}
+.btn{background:var(--accent); color:white; padding:12px 16px; border-radius:8px; text-decoration:none; font-weight:600;}
+.btn.secondary{background:transparent; border:2px solid rgba(0,43,91,0.08); color:var(--blue)}
+
+/* cards grid */
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; padding:22px 6%;}
+.card{background:var(--card); padding:14px; border-radius:12px; box-shadow:0 10px 30px rgba(28,46,74,0.06);}
+
+/* dept badges */
+.badge{display:inline-block; padding:6px 10px; background:linear-gradient(90deg,var(--blue),#005f9e); color:white; border-radius:20px; font-size:13px;}
+
+/* forms */
+.form{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95)); padding:18px; border-radius:12px; max-width:640px;}
+.input{width:100%; padding:12px; margin:8px 0; border-radius:8px; border:1px solid #e6eef7; background:transparent;}
+
+/* footer */
+.footer{padding:28px 6%; margin-top:30px; color:var(--muted); display:flex; justify-content:space-between; align-items:center;}
+
+/* responsive */
+@media(max-width:800px){
+  .hero{flex-direction:column; padding:28px 6%;}
+  .nav-links{display:none}
+}
